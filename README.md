@@ -121,6 +121,8 @@ To replicate the HTML report using Elixir and the Phoenix Web Framework, make su
 
 - Now you can visit [`localhost:4000`](http://localhost:4000) from your browser and preview the report.
 
+- Press CRL+C (MacOS), twice to stop the server if needed.
+
 > **_IMPORTANT_**: At this point, the report will only have the cover page because most components and control flow calls are still commented in the master template.
 
 - The online version of your report will look like this:
@@ -134,29 +136,103 @@ To replicate the HTML report using Elixir and the Phoenix Web Framework, make su
 ## Customize the Master Template
 
 ### 1. Add outline schema:
-- Create the folder `lib/italy_web/outline`
-```bash
-mkdir lib/italy_web/outline
-```
+- Create a new folder called `lib/country_web/outline/` in your Phoenix project:
 
-- Add the outline schema file `outline_schema.ex`
+  ```bash
+  mkdir lib/country_web/outline
+  ```
 
-- Edit the home page controller:
-```elixir
-defmodule ItalyWeb.PageController do
-  use ItalyWeb, :controller
+- Add a outline schema file `lib/country_web/outline/outline_schema.ex`. You can find an example in this template repo at `Resources/outline_schema.ex`. Copy and adapt this file into your Phoenix project.
 
-  alias ItalyWeb.Outline.OutlineSchema  # Add this alias
+- The outline file is an Elixir module, it should be named as the Phoenix project. For example, if you are working with a Phoenix project called `poland`, the module should be named `PolandWeb.Outline.OutlineSchema`.
 
-  def home(conn, _params) do
-    render(
-      conn,
-      :home,
-      layout: false,
-      outline: OutlineSchema.get_outline() # Add this argument
-    )
+  ```elixir
+  defmodule PolandWeb.Outline.OutlineSchema do
+    def get_outline do
+    ...
+    end
   end
-end
-```
+  ```
 
+- Now that we have the outline schema module, we need to edit the home page controller to pass the outline data to the master template. In the respective page controller file `lib/country_web/controllers/page_controller` import the outline schema module and pass the outline data to the render function. For example, in a Phoenix project called `italy`, you should do the following modifications:
+
+  ```elixir
+  defmodule ItalyWeb.PageController do
+    use ItalyWeb, :controller
+
+    alias ItalyWeb.Outline.OutlineSchema  # Add this alias
+
+    def home(conn, _params) do
+      render(
+        conn,
+        :home,
+        layout: false,
+        outline: OutlineSchema.get_outline() # Add this argument
+      )
+    end
+  end
+  ```
+
+- This will allow you to access the outline data in the master home template using `@outline`.
+
+### 2. Customizing components:
+
+- Add long, non-reusable components as HEEX files in `lib/italy_web/controllers/page_html/`:
+  - The following examples are for reference:
+    - `_aboutReport.html.heex`
+    - `_acknowledgements.html.heex`
+    - `_executiveFindings.hetml.heex`
+    - `_findingsSection1.html.heex`
+    - `_tableContents.html.heex`
+
+  - You can call them in the home page template using:
+  ```elixir
+  {_acknowledgements(assigns)}
+  ```
+
+- Add reusable components as .ex files in `lib/italy_web/components/`:
+  - The following examples are for reference:
+    - `chapter_page.ex`
+    - `single_panel.ex`
+    - `bipanel.ex`
+
+  - Import the components in `lib/italy_web.ex`:
+  ```elixir
+  import PathwaysToJusticeMaltaWeb.Components.ChapterPage
+  import PathwaysToJusticeMaltaWeb.Components.SinglePanel
+  import PathwaysToJusticeMaltaWeb.Components.Bipanel
+  ```
+
+  - You can call them in the home page template using:
+  ```elixir
+  <.accordion_component title="Your Title Here">
+    Your content here.
+  </.accordion_component>
+  ```
+
+  - **Naming and structure conventions**:
+    - Use a leading underscore (`_component_name.html.heex`) for non-reusable partials to clearly distinguish them from full templates.
+    - Keep file names descriptive and aligned with report sections to make navigation easier.
+    - Group related components (e.g. findings sections) in the same directory to mirror the report structure.
+
+  - **Passing data and assigns**:
+    - Both HEEX partials and reusable components receive `assigns` from the parent template.
+    - When needed, define and document expected assigns at the top of the component for clarity.
+    - Prefer explicit assigns over relying on global state to keep components predictable and easier to reuse.
+
+  - **Slots and content composition (for reusable components)**:
+    - Use slots (`<:inner_block>`) to allow flexible content injection while keeping layout logic centralized.
+    - This is especially useful for panels, accordions, or repeated report layouts where only the content changes.
+
+  - **Styling considerations**:
+    - Keep layout and structure inside components, but avoid hard-coding content-specific styles.
+    - Reuse CSS classes consistently across components to maintain visual coherence across the report.
+
+  - **When to create a new component**:
+    - Create a reusable `.ex` component when the same layout or UI pattern appears more than once.
+    - Use HEEX partials for long, single-use sections where reuse is unlikely and readability matters more.
+
+  - **Testing and iteration**:
+    - After adding or modifying components, verify rendering by running the Phoenix server and checking the homepage.
+    - Small visual changes are easier to manage when components remain focused and narrowly scoped.
 
