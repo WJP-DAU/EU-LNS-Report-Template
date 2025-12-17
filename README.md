@@ -210,6 +210,8 @@ To replicate the HTML report using Elixir and the Phoenix Web Framework, make su
   </.accordion_component>
   ```
 
+  > **_IMPORTANT_**: In this template repo, you can find all the reusable and non-reusable components used to render the Justice Pathways Report inside the `Resources/Components/` folder. Reusable components do not need major modifications, while non-reusable components should be adjusted to fit your country data and analysis.
+
   - **Naming and structure conventions**:
     - Use a leading underscore (`_component_name.html.heex`) for non-reusable partials to clearly distinguish them from full templates.
     - Keep file names descriptive and aligned with report sections to make navigation easier.
