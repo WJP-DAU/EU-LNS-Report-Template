@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="csrf-token" content={get_csrf_token()} />
+    <.live_title default="Paths to Justice in COUNTRY">
+      {assigns[:page_title]}
+    </.live_title>
+    <link phx-track-static rel="stylesheet" href={~p"/assets/app.css"} />
+    <script defer phx-track-static type="text/javascript" src={~p"/assets/app.js"}>
+    </script>
+    
+<!-- Google tag (gtag.js) -->
+    <script async="" src="https://www.googletagmanager.com/gtag/js?id=UA-5858733-1">
+    </script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'UA-5858733-1');
+    </script>
+    
+<!-- HTML Meta Tags -->
+    <title>Pathways to Justice in COUNTRY</title>
+    <meta
+      content="This report presents a summary of findings related to people's lived experiences with justice problems and their pathways to resolve them in COUNTRY."
+      name="description"
+    />
+    
+<!-- Google / Search Engine Tags -->
+    <meta content="Pathways to Justice in COUNTRY" itemprop="name" />
+    <meta
+      content="This report presents a summary of findings related to people's lived experiences with justice problems and their pathways to resolve them in COUNTRY."
+      itemprop="description"
+    />
+    <meta
+      content="https://worldjusticeproject.org/rule-of-law-lac/shareimage_LAC.jpg"
+      itemprop="image"
+    />
+    
+<!-- Facebook Meta Tags -->
+    <meta content="https://worldjusticeproject.org/rule-of-law-index" property="og:url" />
+    <meta content="website" property="og:type" />
+    <meta content="Pathways to Justice in COUNTRY" property="og:title" />
+    <meta
+      content="This report presents a summary of findings related to people's lived experiences with justice problems and their pathways to resolve them in Italy."
+      property="og:description"
+    />
+    <meta
+      content="https://worldjusticeproject.org/rule-of-law-lac/shareimage_LAC.jpg"
+      property="og:image"
+    />
+    
+<!-- Twitter Meta Tags -->
+    <meta content="summary_large_image" name="twitter:card" />
+    <meta content="Pathways to Justice in COUNTRY" name="twitter:title" />
+    <meta
+      content="This report presents a summary of findings related to people's lived experiences with justice problems and their pathways to resolve them in Italy."
+      name="twitter:description"
+    />
+    <meta
+      content="https://worldjusticeproject.org/rule-of-law-lac/shareimage_LAC.jpg"
+      name="twitter:image"
+    />
+    
+<!-- Favicon/Fontawesome -->
+    <link href="static/assets/favicon.ico" rel="icon" type="icon" />
+    <script
+      crossorigin="anonymous"
+      defer=""
+      integrity="sha384-tzzSw1/Vo+0N5UhStP3bvwWPq+uvzCMfrN1fEFe+xBmv1C/AtVX5K0uZtmcHitFZ"
+      src="https://use.fontawesome.com/releases/v5.0.13/js/solid.js"
+    >
+    </script>
+    <script
+      crossorigin="anonymous"
+      defer=""
+      integrity="sha384-6OIrr52G08NpOFSZdxxz1xdNSndlD4vdcf/q2myIUVO0VsqaGHJsB0RaBE01VTOY"
+      src="https://use.fontawesome.com/releases/v5.0.13/js/fontawesome.js"
+    >
+    </script>
+  </head>
+  <body>
+    {@inner_content}
+  </body>
+</html>

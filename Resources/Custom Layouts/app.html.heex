@@ -1,0 +1,307 @@
+<div class="wrapper" id="invoice">
+  
+<!-- iframe menu WJP -->
+  <%!-- <iframe id="embedMenu" src="https://worldjusticeproject.org/wjp-index"></iframe> --%>
+  
+<!-- Breadcrumb -->
+  <%!-- <div class="breadcrumb-content">
+    <div class="wrap-breadcrum">
+      <ol class="breadcrumb">
+        <li>
+          <a href="https://worldjusticeproject.org/">
+            Home
+          </a>
+        </li>
+        <li>
+          <a href="https://worldjusticeproject.org/our-work">
+            Our Work
+          </a>
+        </li>
+        <li>
+          <a href="https://worldjusticeproject.org/our-work/wjp-rule-law-index">
+            Research and Data
+          </a>
+        </li>
+        <li>
+          <a href="...CUSTOMIZE...">
+            ...CUSTOMIZE...
+          </a>
+        </li>
+      </ol>
+    </div>
+  </div> --%>
+  
+<!-- CTA MENU / only WEB Browser  -->
+  <div class="no-print wrap-menu" style="z-index:3; position:fixed; top: 50%; margin-top:-220px;">
+    <button class="navbar-btn active" id="sidebarCollapse" type="button">
+      <div class="row align-baseline mx-0">
+        <div class="col-4 px-0"></div>
+        <div class="col-8 px-0">
+          <p>Content</p>
+        </div>
+      </div>
+    </button>
+  </div>
+  
+<!-- MENU / only WEB Browser  -->
+  <%!-- <nav class="no-print mt-5 nav active" id="sidebar">
+    <ul class="list-unstyled components">
+      <li class="active">
+        <a class="btn-level1 menuOpt" href="#Cover" id="MenuCover">
+          <img class="mx-2" src={~p"/images/images_layout/icnHome.svg"} />
+          <span>
+            Cover
+          </span>
+        </a>
+      </li>
+      <li>
+        <a class="btn-level1 menuOpt" href="#About" id="MenuAbout">
+          <img class="mx-2" src={~p"/images/images_layout/icnChapi.svg"} />
+          <span>
+            About this Report
+          </span>
+        </a>
+      </li>
+      <li>
+        <a class="btn-level1" href="#pageSubmenu" id="DropDown">
+          <img class="mx-2" src={~p"/images/images_layout/icnChapii.svg"} />
+          <span>
+            Thematic Findings <span class="icn-dropdown"></span>
+          </span>
+        </a>
+        <ul class="collapse list-unstyled" id="pageSubmenu">
+          <li>
+            <a class="btn-level2 menuOpt" href="#SectionI">
+              <span>
+                Section I: Rule of Law and Government Accountability
+              </span>
+            </a>
+            <a class="btn-level2 link-collapse" href="#SectionI">
+              I
+            </a>
+          </li>
+          <li>
+            <a class="btn-level2 menuOpt" href="#SectionII">
+              <span>
+                Section II: Elections and News Consumption
+              </span>
+            </a>
+            <a class="btn-level2 link-collapse" href="#SectionII">
+              II
+            </a>
+          </li>
+          <li>
+            <a class="btn-level2 menuOpt" href="#SectionIII">
+              <span>
+                Section III: Authoritarianism and Fundamental Freedoms
+              </span>
+            </a>
+            <a class="btn-level2 link-collapse" href="#SectionIII">
+              III
+            </a>
+          </li>
+          <li>
+            <a class="btn-level2 menuOpt" href="#SectionIV">
+              <span>
+                Section IV: Corruption and Trust
+              </span>
+            </a>
+            <a class="btn-level2 link-collapse" href="#SectionIV">
+              IV
+            </a>
+          </li>
+        </ul>
+      </li>
+      <li>
+        <a class="btn-level1 menuOpt" href="#Project" id="MenuProject">
+          <img class="mx-2" src={~p"/images/images_layout/icnChapiii.svg"} />
+          <span>
+            Project Design
+          </span>
+        </a>
+      </li>
+      <li>
+        <a class="btn-level1 menuOpt" href="#Appendix" id="MenuAppendix">
+          <img class="mx-2" src={~p"/images/images_layout/icnChapiv.svg"} />
+          <span>
+            Appendix
+          </span>
+        </a>
+      </li>
+      <li>
+        <a
+          class="btn-level1 menuOpt"
+          id="MenuDownload"
+          onclick="window.open('static/US_Report_WJP_2024.pdf')"
+        >
+          <img class="mx-2" src={~p"/images/images_layout/icnDownload.svg"} />
+          <span>
+            Download
+          </span>
+        </a>
+      </li>
+    </ul>
+  </nav> --%>
+
+  <div id="content">
+    {@inner_content}
+  </div>
+</div>
+<a class="btn-top" id="ButtonTop" onclick="clickTop();" title="Ir arriba">
+  <img src={~p"/images/images_layout/icnGoTop.svg"} style="width: 16px" />
+</a>
+
+<!-- jQuery CDN - Slim version (=without AJAX) -->
+<script
+  crossorigin="anonymous"
+  integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+  src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+>
+</script>
+
+<!-- Popper.JS -->
+<script
+  crossorigin="anonymous"
+  integrity="sha384-cs/chFZiN24E4KMATLdqdvsezGxaGsi4hLGOzlXwp5UZB1LY//20VyM2taTB4QvJ"
+  src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js"
+>
+</script>
+
+<!-- Bootstrap JS -->
+<script
+  crossorigin="anonymous"
+  integrity="sha384-uefMccjFJAIv6A+rW+L4AHf99KvxDjWSu1z9VI8SKNVmz4sk7buKt/6v9KI65qnm"
+  src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js"
+>
+</script>
+<script type="text/javascript">
+  $(document).ready(function () {
+      $('#sidebarCollapse').on('click', function () {
+          $('#sidebar').toggleClass('active');
+          $(this).toggleClass('active');
+      });
+  });
+</script>
+<script>
+  $(document).ready(function() {
+      var topMenu = $(".nav"),
+      topMenuHeight = topMenu.outerHeight()+15,
+      menuItems = topMenu.find("a"),
+      scrollItems = menuItems.map(function(){
+          var item = $($(this).attr("href"));
+          if (item.length) { return item; }
+      });
+      $(window).scroll(function() {
+          var height = $(window).scrollTop();
+          if(height  > 550) {
+              $('#ButtonTop').addClass('toTop');
+          }
+          else{
+              $('#ButtonTop').removeClass('toTop');
+          }
+
+          var fromTop = $(this).scrollTop()+topMenuHeight;
+          var cur = scrollItems.map(function(){
+              if ($(this).offset().top < fromTop)
+                  return this;
+          });
+          if(cur.length === 11){
+              cur = cur[cur.length-9];
+          } else if(cur.length > 11){
+              cur = cur[cur.length-1];
+          }else{
+              cur = cur[cur.length-2];
+          }
+          var id = cur && cur.length ? cur[0].id : "";
+                  // Set/remove active class
+          menuItems
+          .parent().removeClass("active")
+          .end().filter("[href='#"+id+"']").parent().addClass("active");
+      });
+
+      var selector = 'a.btn-level1';
+      var selectorsubmenu = 'a.btn-level2';
+
+              /*$(selector).on('click', function(){
+                  $(selector).removeClass('on');
+                  $(this).addClass('on');
+              });*/
+
+      $('#DropDown').on('click', function(){
+          $('#pageSubmenu').toggleClass('show');
+          $(this).toggleClass('show');
+      });
+
+      $('#MenuCover, #MenuAbout, #MenuProject, #MenuProject, #MenuDownload').on('click', function(){
+          $('#pageSubmenu').removeClass('show');
+          $('.btn-level2').removeClass('active');
+
+      });
+
+      $(selectorsubmenu).on('click', function(){
+          $(selectorsubmenu).removeClass('active');
+          $(this).addClass('active');
+      });
+
+      $(window).scroll(function() {
+          var height = $(window).scrollTop();
+          if(height  > 70) {
+              $('#sidebarCollapse').addClass('movil-icon-menu');
+              $('#sidebar').addClass('movil-menu');
+          }
+          else{
+              $('#sidebarCollapse').removeClass('movil-icon-menu');
+              $('#sidebar').removeClass('movil-menu');
+          }
+      });
+
+      $(window).scroll(function() {
+          var height = $(window).scrollTop();
+          if(height  > 70) {
+              $('#sidebarCollapse').addClass('movil-icon-menu');
+              $('#sidebar').addClass('movil-menu');
+          }
+          else{
+              $('#sidebarCollapse').removeClass('movil-icon-menu');
+              $('#sidebar').removeClass('movil-menu');
+          }
+      });
+
+      $('.menuOpt').click( function(e) {
+          $('#sidebar').addClass('active');
+          $('#sidebarCollapse').addClass('active');
+      } );
+
+  });
+
+  function clickTop(){
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+  }
+
+  $( document ).ready(function() {
+      var WindowWidth = $(window).width();
+      if(WindowWidth  > 479) {
+          $( "#sidebarCollapse" ).click();
+      }
+      else{
+          $( "#sidebarCollapse2" ).click();
+      }
+  });
+</script>
+
+<!-- iframe menu script -->
+<script>
+  const menu = document.getElementById('embedMenu');
+  window.addEventListener('message', function(e) {
+  console.log(e, arguments)
+  if (e.data === 'dropdownOpen') {
+  console.log('toggle on')
+  menu.classList.toggle('fullHeight', true);
+  } else if (e.data === 'dropdownClosed' || e.data === 'dropdownClosedViaTimeout') {
+  console.log('toggle off')
+  menu.classList.toggle('fullHeight', false);
+  } else if (e.data === 'toggleMobileMenu') {
+  menu.classList.toggle('fullHeight');
+  }
+  })
+</script>

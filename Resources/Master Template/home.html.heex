@@ -1,0 +1,152 @@
+<section class="bg-page-cover" id="Cover">
+  <div class="logo-cover no-print">
+    <img src={~p"/images/images_layout/logo.svg"} />
+  </div>
+  <div class="container">
+    <div class="text-cover" style="height:calc(100vh - 297px)">
+      <div class="row align-items-end h-100">
+        <div class="col-12">
+          <div class="row justify-content-center">
+            <div class="col-md-9 leftside-line p-3">
+              <h1>
+                Pathways to Justice in COUNTRY
+              </h1>
+              <p class="text-white mb-0">
+                Key Findings from the EU General Population Poll 2024
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<%!-- Acknowledgements --%>
+<%!-- {_acknowledgements(assigns)} --%>
+
+<%!-- Table of Contents --%>
+<%!-- <.table_contents outline={@outline} /> --%>
+
+<!-- ABOUT THIS REPORT -->
+<%!-- {_aboutReport(assigns)} --%>
+<%!-- {_executiveFindings(assigns)} --%>
+
+<!-- Section 1 -->
+<%!-- <.chapter_page section={@outline.sections.section_1} /> --%>
+<%!-- {_findingsSection1(assigns)} --%>
+<%!-- <%= for figure <- @outline.sections.section_1.figures do %>
+  <%= case figure.template do %>
+    <% "single_panel" -> %>
+      <.single_panel figure={figure} conn={@conn} />
+    <% "bipanel" -> %>
+      <.bipanel page={figure} conn={@conn} />
+  <% end %>
+<% end %> --%>
+
+<!-- Section 2 -->
+<%!-- <.chapter_page section={@outline.sections.section_2} /> --%>
+
+<!-- Sub-Section 2.1 -->
+<%!-- {_findingsSection2_1(assigns)} --%>
+<%!-- <%= for figure <- Enum.slice(@outline.sections.section_2.figures, 0, 2) do %>
+  <%= case figure.template do %>
+    <% "single_panel" -> %>
+      <.single_panel figure={figure} conn={@conn} />
+    <% "bipanel" -> %>
+      <.bipanel figure={figure} conn={@conn} />
+  <% end %>
+<% end %> --%>
+
+<!-- Sub-Section 2.2 -->
+<%!-- {_findingsSection2_2(assigns)} --%>
+<%!-- <%= for figure <- Enum.slice(@outline.sections.section_2.figures, 2, 4) do %>
+  <%= case figure.template do %>
+    <% "single_panel" -> %>
+      <.single_panel figure={figure} conn={@conn} />
+    <% "bipanel" -> %>
+      <.bipanel page={figure} conn={@conn} />
+  <% end %>
+<% end %> --%>
+
+<!-- Sub-Section 2.3 -->
+<%!-- {_findingsSection2_3(assigns)} --%>
+<%!-- <%= for figure <- Enum.slice(@outline.sections.section_2.figures, 6, 3) do %>
+  <%= case figure.template do %>
+    <% "single_panel" -> %>
+      <.single_panel figure={figure} conn={@conn} />
+    <% "bipanel" -> %>
+      <.bipanel page={figure} conn={@conn} />
+  <% end %>
+<% end %> --%>
+
+<!-- Sub-Section 2.4 -->
+<%!-- {_findingsSection2_4(assigns)} --%>
+<%!-- <%= for figure <- Enum.slice(@outline.sections.section_2.figures, 9, 5) do %>
+  <%= case figure.template do %>
+    <% "single_panel" -> %>
+      <.single_panel figure={figure} conn={@conn} />
+    <% "bipanel" -> %>
+      <.bipanel page={figure} conn={@conn} />
+  <% end %>
+<% end %> --%>
+
+<!-- Sub-Section 2.5 -->
+<%!-- {_findingsSection2_5(assigns)} --%>
+<%!-- <%= for figure <- Enum.slice(@outline.sections.section_2.figures, 14, 2) do %>
+  <%= case figure.template do %>
+    <% "single_panel" -> %>
+      <.single_panel figure={figure} conn={@conn} />
+    <% "bipanel" -> %>
+      <.bipanel page={figure} conn={@conn} />
+  <% end %>
+<% end %> --%>
+
+<!-- Section 3 -->
+<%!-- <.chapter_page section={@outline.sections.section_3} /> --%>
+<%!-- {_jgbox(assigns)} --%>
+<%!-- {_findingsSection3(assigns)} --%>
+<%!-- <%= for figure <- @outline.sections.section_3.figures do %>
+  <%= case figure.template do %>
+    <% "single_panel" -> %>
+      <.single_panel figure={figure} conn={@conn} />
+    <% "bipanel" -> %>
+      <.bipanel page={figure} conn={@conn} />
+  <% end %>
+<% end %> --%>
+
+<!-- Section 4 -->
+<%!-- <.chapter_page section={@outline.sections.section_4} /> --%>
+<%!-- {_findingsSection4(assigns)} --%>
+<%!-- <%= for figure <- @outline.sections.section_4.figures do %>
+  <%= case figure.template do %>
+    <% "single_panel" -> %>
+      <.single_panel figure={figure} conn={@conn} />
+    <% "bipanel" -> %>
+      <.bipanel page={figure} conn={@conn} />
+  <% end %>
+<% end %> --%>
+
+<!-- Section 5 -->
+<%!-- <.chapter_page section={@outline.sections.section_5} /> --%>
+<%!-- {_findingsSection5(assigns)} --%>
+<%!-- <%= for figure <- @outline.sections.section_5.figures do %>
+  <%= case figure.template do %>
+    <% "single_panel" -> %>
+      <.single_panel figure={figure} conn={@conn} />
+    <% "bipanel" -> %>
+      <.bipanel page={figure} conn={@conn} />
+  <% end %>
+<% end %> --%>
+
+<!-- Section 6 -->
+<%!-- <.chapter_page section={@outline.sections.section_6} /> --%>
+<%!-- {_findingsSection6(assigns)} --%>
+
+<!-- Section 7 -->
+<%!-- <.chapter_page section={@outline.sections.recs} /> --%>
+<%!-- {_findingsSection7(assigns)} --%>
+
+<!-- Appendix -->
+<%!-- <.chapter_page section={@outline.appendix} /> --%>
+<%!-- {_appendix(assigns)} --%>
