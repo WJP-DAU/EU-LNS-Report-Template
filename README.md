@@ -64,14 +64,14 @@ To replicate the HTML report using Elixir and the Phoenix Web Framework, make su
   @import "./media-print-styles.css";
   ```
 
+  > **_WARNING_**: Be aware that there inside your newly created Phoenix project, there is a `assets` directory in the root folder. Once you run the Phoenix server for the first time, Phoeniox will automatically create a `priv/static/assets/` folder where it will compile and store all the static assets (CSS, JS, images, etc). Do NOT confuse this folder with the `assets` folder in the root directory of your Phoenix project.
+
 ### 4. Custom Layouts
 - In this template repo, inside the `Resources/Custom Layouts/` folder, you will find some custom HEEX files. Copy these templates into the `lib/country_web/components/layouts/` folder in your Phoenix project:
   - `app.html.heex`
   - `root.html.heex`
 
-> **_IMPORTANT_**: Take a look at the elements in these layout templates and adjust accordingly. If publishing the HTML version, you might also need to adjust the paths and meta tags. See the commented parts of these files.
-
-> **_WARNING_**: Be aware that there inside your newly created Phoenix project, there is a `assets` directory in the root folder. Once you run the Phoenix server for the first time, Phoeniox will automatically create a `priv/static/assets/` folder where it will compile and store all the static assets (CSS, JS, images, etc). Do NOT confuse this folder with the `assets` folder in the root directory of your Phoenix project.
+  > **_IMPORTANT_**: Take a look at the elements in these layout templates and adjust accordingly. If publishing the HTML version, you might also need to adjust the paths and meta tags. See the commented parts of these files.
 
 ### 5. Static Resources:
 - In this template repo, you will find a folder called `Resources/Static Resources/images_layout/`. Copy this folder into your Phoenix project -> `priv/static/images/images_layout/`.
