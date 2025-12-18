@@ -81,7 +81,8 @@ To replicate the HTML report using Elixir and the Phoenix Web Framework, make su
 - Before starting to work on this report, you should have the following resources at hand already:
   - **A front cover image**: Please name it `bg-cover.jpg` and add it to the `priv/static/images/` folder in your Phoenix project.
   - **A set of data visualizations**: Add all the figures as SVG files in a new folder called `figures` in the following path of your Phoenix project -> `priv/static/images/figures/`
-  - (Optional) Delete the existing `priv/static/images/logo.svg` that was created by default when creating the Phoenix project.
+  
+- (Optional) Delete the existing `priv/static/images/logo.svg` that was created by default when creating the Phoenix project.
 
 ### 6. Master Template:
 - In this template repo, you will find a file called `Resources/Master Template/home.html.heex`. Replace the following file in your Phoenix project with this master template -> `lib/country_web/controllers/page_html/home.html.heex`.
